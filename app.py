@@ -94,7 +94,8 @@ if st.button("Calculate Best Upgrades"):
             "KVK Points": f"{kvk_pts:,}".replace(",", " "),
             "Gain (%)": f"{gain_pct:.1f}",
             "% of Max Gain": f"{(gain_pct/max_gain*100):.1f}%" if max_gain>0 else "0%",
-            "% of Max KVK Points": f"{(kvk_pts/max_kvk_points*100):.1f}%" if max_kvk_points>0 else "0%"
+            "% of Max KVK Points": f"{(kvk_pts/max_kvk_points*100):.1f}%" if max_kvk_points>0 else "0%",
+            "Cost (S/T/A)": f"{sol['satin']}/{sol['threads']}/{sol['artisans']}"
         }
 
         for c in sol["combo"]:
@@ -112,7 +113,7 @@ if st.button("Calculate Best Upgrades"):
     def highlight_cells(val, col):
         if col == "KVK Points" and val == f"{max_kvk_points:,}".replace(",", " "):
             return "background-color: lightblue; font-weight: bold"
-        if col == "Gain (%)" and val == f"{max_gain:,}".replace(",", " "):
+        if col == "Gain (%)" and val == f"{max_gain:.1f}".replace(",", " "):
             return "background-color: orange; font-weight: bold"
         return ""
 
