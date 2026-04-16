@@ -11,6 +11,16 @@ LEVEL_ORDER = [
     "Gold", "Gold*", "Gold**", "Gold***",
     "Gold T1", "Gold T1*", "Gold T1**", "Gold T1***"
 ]
+
+TROOP_MAP = {
+    "cap": "cavalry",
+    "watch": "cavalry",
+    "coat": "infantry",
+    "pants": "infantry",
+    "belt": "archer",
+    "weapon": "archer"
+}
+
 # ----------------------------
 # 🔹 SET BONUS
 # ----------------------------
@@ -29,7 +39,48 @@ def compute_set_bonus(levels_list, levels, level_index):
 
     return bonus
 
+def compute_set_bonus_detailed(levels_list, level_index):
+    atk = 0
+    deff = 0
 
+    level_keys = list(level_index.keys())
+
+    for lvl in level_keys:
+        idx = level_index[lvl]
+        count = sum(1 for l in levels_list if level_index[l] >= idx)
+
+        if count >= 3:
+            deff += 0.5 * 3  # DEF uniquement
+        if count >= 6:
+            atk += 0.5 * 3   # ATK uniquement
+
+    return atk, deff
+
+def compute_detailed_stats(sol, gear, level_index):
+    stats = {
+        "infantry": {"atk": 0, "def": 0},
+        "archer": {"atk": 0, "def": 0},
+        "cavalry": {"atk": 0, "def": 0},
+    }
+
+    # 🔹 Gain équipement
+    for c in sol["combo"]:
+        troop = TROOP_MAP[c["piece"]]
+        gain = c["gain_items"]
+
+        stats[troop]["atk"] += gain
+        stats[troop]["def"] += gain
+
+    # 🔹 Gain set (recalculé proprement)
+    final_levels = [c["to"] for c in sol["combo"]]
+    atk_set, def_set = compute_set_bonus_detailed(final_levels, level_index)
+
+    # appliquer à toutes les troupes
+    for troop in stats:
+        stats[troop]["atk"] += atk_set
+        stats[troop]["def"] += def_set
+
+    return stats
 # ----------------------------
 #  OPTIMAL PARETO
 # ----------------------------
