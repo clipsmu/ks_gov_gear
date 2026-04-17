@@ -151,8 +151,8 @@ if st.button("Calculate Best Upgrades"):
         return ""
 
     def style_table(df):
-        return df.style.applymap(lambda v: highlight_cells(v, "KVK Points"), subset=["KVK Points"])\
-                       .applymap(lambda v: highlight_cells(v, "Gain (%)"), subset=["Gain (%)"])
+        return df.style.map(lambda v: highlight_cells(v, "KVK Points"), subset=["KVK Points"])\
+                       .map(lambda v: highlight_cells(v, "Gain (%)"), subset=["Gain (%)"])
 
     # Légende visuelle au-dessus du tableau
     st.markdown(
