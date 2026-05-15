@@ -33,13 +33,13 @@ def compute_set_bonus(levels_list, levels, level_index):
         count = sum(1 for l in levels_list if level_index[l] >= idx)
 
         if count >= 3:
-            bonus += 0.5 * 3  # DEF for 3 types
+            bonus += levels[lvl].get("set_bonus", 0) * 3  # DEF for 3 types
         if count >= 6:
-            bonus += 0.5 * 3  # ATK for 3 types
+            bonus += levels[lvl].get("set_bonus", 0)  * 3  # ATK for 3 types
 
     return bonus
 
-def compute_set_bonus_detailed(levels_list, level_index):
+def compute_set_bonus_detailed(levels_list, levels, level_index):
     atk = 0
     deff = 0
 
@@ -50,13 +50,13 @@ def compute_set_bonus_detailed(levels_list, level_index):
         count = sum(1 for l in levels_list if level_index[l] >= idx)
 
         if count >= 3:
-            deff += 0.5 * 3  # DEF uniquement
+            deff += levels[lvl].get("set_bonus", 0) * 3  # DEF for 3 types
         if count >= 6:
-            atk += 0.5 * 3   # ATK uniquement
+            atk += levels[lvl].get("set_bonus", 0)  * 3  # ATK for 3 types
 
     return atk, deff
 
-def compute_detailed_stats(sol, gear, level_index):
+def compute_detailed_stats(sol, gear, levels, level_index):
     stats = {
         "infantry": {"atk": 0, "def": 0},
         "archer": {"atk": 0, "def": 0},
@@ -73,7 +73,7 @@ def compute_detailed_stats(sol, gear, level_index):
 
     # 🔹 Gain set (recalculé proprement)
     final_levels = [c["to"] for c in sol["combo"]]
-    atk_set, def_set = compute_set_bonus_detailed(final_levels, level_index)
+    atk_set, def_set = compute_set_bonus_detailed(final_levels, levels, level_index)
 
     # appliquer à toutes les troupes
     for troop in stats:

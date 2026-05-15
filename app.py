@@ -178,7 +178,7 @@ if st.button("Calculate Best Upgrades"):
 
         with st.expander(f"Option #{idx} — Gain {sol['gain']:.2f}% | KVK {(sol['kvk']*36):,}".replace(",", " ")):
 
-            stats = compute_detailed_stats(sol, gear, level_index)
+            stats = compute_detailed_stats(sol, gear, levels_dict, level_index)
 
             cols = st.columns(3)
 
