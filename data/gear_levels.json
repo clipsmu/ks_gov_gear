@@ -25,5 +25,49 @@
   "Gold T1": {"satin":28000,"threads":280,"artisans":45,"bonus":66.98,"kvk":6250,"set_bonus":1.0},
   "Gold T1*": {"satin":30000,"threads":300,"artisans":55,"bonus":69.53,"kvk":6250,"set_bonus":0},
   "Gold T1**": {"satin":32000,"threads":320,"artisans":55,"bonus":72.08,"kvk":6250,"set_bonus":0},
-  "Gold T1***": {"satin":35000,"threads":340,"artisans":55,"bonus":74.63,"kvk":6250,"set_bonus":0}
+  "Gold T1***": {"satin":35000,"threads":340,"artisans":55,"bonus":74.63,"kvk":6250,"set_bonus":0}, 
+    
+  "Gold T2": {"satin":38000,"threads":360,"artisans":55,"bonus":77.18,"kvk":6250,"set_bonus":1.0},
+  "Gold T2*": {"satin":43000,"threads":430,"artisans":75,"bonus":79.73,"kvk":6250,"set_bonus":0},
+  "Gold T2**": {"satin":45000,"threads":460,"artisans":80,"bonus":82.28,"kvk":6250,"set_bonus":0},
+  "Gold T2***": {"satin":48000,"threads":500,"artisans":85,"bonus":84.83,"kvk":6250,"set_bonus":0},
+
+  "Gold T3": {"satin":60000,"threads":600,"artisans":120,"bonus":87.38,"kvk":6250,"set_bonus":1.0},
+  "Gold T3*": {"satin":70000,"threads":700,"artisans":140,"bonus":89.93,"kvk":6250,"set_bonus":0},
+  "Gold T3**": {"satin":80000,"threads":800,"artisans":160,"bonus":92.48,"kvk":6250,"set_bonus":0},
+  "Gold T3***": {"satin":90000,"threads":900,"artisans":180,"bonus":95.00,"kvk":6250,"set_bonus":0},
+
+  "Red": {"satin":108000,"threads":1080,"artisans":220,"bonus":97.50,"kvk":6250,"set_bonus":1.0},
+  "Red*": {"satin":114000,"threads":1140,"artisans":230,"bonus":100.00,"kvk":6250,"set_bonus":0},
+  "Red**": {"satin":121000,"threads":1210,"artisans":240,"bonus":102.50,"kvk":6250,"set_bonus":0},
+  "Red***": {"satin":128000,"threads":1280,"artisans":250,"bonus":105.00,"kvk":6250,"set_bonus":0},
+
+  "Red T1": {"satin":154000,"threads":1540,"artisans":300,"bonus":107.50,"kvk":6250,"set_bonus":1.0},
+  "Red T1*": {"satin":163000,"threads":1630,"artisans":320,"bonus":110.00,"kvk":6250,"set_bonus":0},
+  "Red T1**": {"satin":173000,"threads":1730,"artisans":340,"bonus":112.50,"kvk":6250,"set_bonus":0},
+  "Red T1***": {"satin":183000,"threads":1830,"artisans":360,"bonus":115.00,"kvk":6250,"set_bonus":0},
+
+  "Red T2": {"satin":220000,"threads":2200,"artisans":430,"bonus":117.50,"kvk":6250,"set_bonus":1.0},
+  "Red T2*": {"satin":233000,"threads":2330,"artisans":460,"bonus":120.00,"kvk":6250,"set_bonus":0},
+  "Red T2**": {"satin":247000,"threads":2470,"artisans":490,"bonus":122.50,"kvk":6250,"set_bonus":0},
+  "Red T2***": {"satin":262000,"threads":2620,"artisans":520,"bonus":125.00,"kvk":6250,"set_bonus":0},
+
+  "Red T3": {"satin":288000,"threads":2880,"artisans":570,"bonus":127.75,"kvk":6250,"set_bonus":1.0},
+  "Red T3*": {"satin":302000,"threads":3020,"artisans":600,"bonus":130.50,"kvk":6250,"set_bonus":0},
+  "Red T3**": {"satin":317000,"threads":3170,"artisans":630,"bonus":133.25,"kvk":6250,"set_bonus":0},
+  "Red T3***": {"satin":333000,"threads":3330,"artisans":660,"bonus":136.00,"kvk":6250,"set_bonus":0},
+
+  "Red T4": {"satin":366000,"threads":3660,"artisans":730,"bonus":138.75,"kvk":6250,"set_bonus":1.0},
+  "Red T4*": {"satin":384000,"threads":3840,"artisans":770,"bonus":141.50,"kvk":6250,"set_bonus":0},
+  "Red T4**": {"satin":403000,"threads":4030,"artisans":810,"bonus":144.25,"kvk":6250,"set_bonus":0},
+  "Red T4***": {"satin":423000,"threads":4230,"artisans":850,"bonus":147.00,"kvk":6250,"set_bonus":0},
+
+  "Red T5": {"satin":465000,"threads":4650,"artisans":940,"bonus":150.00,"kvk":6250,"set_bonus":1.0},
+  "Red T5*": {"satin":479000,"threads":4790,"artisans":970,"bonus":153.00,"kvk":6250,"set_bonus":0},
+  "Red T5**": {"satin":493000,"threads":4930,"artisans":1000,"bonus":156.00,"kvk":6250,"set_bonus":0},
+  "Red T5***": {"satin":508000,"threads":5080,"artisans":1030,"bonus":159.00,"kvk":6250,"set_bonus":0},
+
+  "Red T6": {"satin":549000,"threads":5490,"artisans":1110,"bonus":162.00,"kvk":6250,"set_bonus":1.0},
+  "Red T6*": {"satin":565000,"threads":5650,"artisans":1140,"bonus":165.00,"kvk":6250,"set_bonus":0},
+  "Red T6**": {"satin":582000,"threads":5820,"artisans":1170,"bonus":168.00,"kvk":6250,"set_bonus":0}
 }

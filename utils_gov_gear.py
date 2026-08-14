@@ -9,7 +9,15 @@ LEVEL_ORDER = [
     "Purple", "Purple*", "Purple**", "Purple***",
     "Purple T1", "Purple T1*", "Purple T1**", "Purple T1***",
     "Gold", "Gold*", "Gold**", "Gold***",
-    "Gold T1", "Gold T1*", "Gold T1**", "Gold T1***"
+    "Gold T1", "Gold T1*", "Gold T1**", "Gold T1***", 
+    "Gold T2", "Gold T2*", "Gold T2**", "Gold T2***",
+    "Red", "Red*", "Red**", "Red***",
+    "Red T1", "Red T1*", "Red T1**", "Red T1***",
+    "Red T2", "Red T2*", "Red T2**", "Red T2***",
+    "Red T3", "Red T3*", "Red T3**", "Red T3***",
+    "Red T4", "Red T4*", "Red T4**", "Red T4***",
+    "Red T5", "Red T5*", "Red T5**", "T5 T4***",
+    "Red T6", "Red T6*", "Red T6**",
 ]
 
 TROOP_MAP = {
