@@ -12,7 +12,7 @@ st.title("⚔️ Kingshot Governor Gear Optimizer")
 # ----------------------------
 for piece in PIECES:
     if piece not in st.session_state:
-        st.session_state[piece] = "Blue**"
+        st.session_state[piece] = "Gold"
 
 # ----------------------------
 # LOAD / SAVE CURRENT GEAR
@@ -40,9 +40,36 @@ if col2.button("Save current gear"):
     )
 
 # ----------------------------
+# INITIALIZE ALL GEAR
+# ----------------------------
+st.header("⚙️ Initialize All Gear")
+
+init_col1, init_col2 = st.columns([2, 1])
+
+with init_col1:
+    initialize_level = st.selectbox(
+        "Initialize all pieces to",
+        LEVEL_ORDER,
+        index=LEVEL_ORDER.index("Blue**"),
+        key="initialize_level"
+    )
+
+with init_col2:
+    st.write("")
+    st.write("")
+    if st.button("🔄 Initialize All", use_container_width=True):
+        for piece in PIECES:
+            st.session_state[piece] = initialize_level
+
+        st.success(f"All gear initialized to {initialize_level}")
+        st.rerun()
+
+
+# ----------------------------
 # CURRENT GEAR INPUT (selectboxes)
 # ----------------------------
 st.header("🛡️ Current Governor Gear")
+
 gear = {}
 cols = st.columns(len(PIECES))
 for i, piece in enumerate(PIECES):
@@ -55,25 +82,6 @@ for i, piece in enumerate(PIECES):
 st.divider()
 
 col1, col2, col3 = st.columns([1, 1, 4])
-
-# Load bouton + uploader caché
-with col1:
-    uploaded_file = st.file_uploader(
-        "Load",
-        type="json",
-        label_visibility="collapsed"
-    )
-
-# Save bouton
-with col2:
-    if st.button("💾 Save"):
-        build = {piece: st.session_state.get(piece, "Blue**") for piece in PIECES}
-        st.download_button(
-            label="Download",
-            data=json.dumps(build, indent=2),
-            file_name="gear.json",
-            mime="application/json"
-        )
 
 # Feedback zone
 with col3:
